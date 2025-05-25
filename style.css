@@ -294,7 +294,7 @@
     }  
     
     .about .about-content  .right .html::before{
-        width: 90%;
+        width: 85%;
     }
 
     .about .about-content  .right .css::before{
@@ -302,18 +302,18 @@
     }
     
     .about .about-content  .right .javascript::before{
-        width: 50%;
+        width: 75%;
     }
 
     .about .about-content  .right .java::before{
-        width: 70%;
+        width: 90%;
     }
     
 /*services section*/
     .services, .reviews{
         color: #fff;
         background: #111;
-        height: 89vh;
+        padding: 100px 0;
     }
     
     .services .title::before,
@@ -323,16 +323,17 @@
     .services .title::after,
     .reviews .title::after{
         background: #111;
-    content: "What I Provide";
+        content: "What I Provide";
     }
     .services .services-content .card{
         width: calc(33% - 20px);
         background: #222;
         text-align: center;
         border-radius: 6px;
-        padding:  20px 25px ;
+        padding: 50px 25px;
         cursor: pointer;
         transition: all 0.3s ease;
+        margin-bottom: 30px;
     }
     .services .services-content .card i{
         font-size: 50px;
@@ -362,7 +363,7 @@
     }
 /*reviews section*/
     .reviews{
-        height: 100vh;
+        padding: 100px 0;
     }
     .reviews .title::after{
         content: "Top Reviews";
@@ -376,7 +377,7 @@
         padding: 25px 35px;
         text-align: center;
         transition: all 0.3s ease;
-
+        margin: 15px;
     }
     .reviews .carousel .card:hover{
         background: #e2127A;
@@ -450,39 +451,54 @@
     }
 
     .contact .contact-content .column{
-        width: calc(50% - 30px);  
-        
+        width: 100%;
+        padding: 0 50px;
     }
 
-    .contact .contact-content  .left p{
-        text-align: justify;
+    .contact .contact-content .left p{
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        line-height: 1.6;
+        font-size: 16px;
     }
 
-    .contact .contact-content  .left .icons{
-        margin: 10px 0;
+    .contact .contact-content .left .icons{
+        margin: 30px auto;
+        max-width: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .contact .contact-content  .row{
+    .contact .contact-content .row{
         display: flex;
         height: 65px;
         align-items: center;
-    }
-
-    .contact .contact-content .row .info{
-        margin-left: 25px;
+        justify-content: flex-start;
+        padding: 0 20px;
     }
 
     .contact .contact-content .row i{
         font-size: 25px;
         color: #e2127A;
+        min-width: 40px;
+        text-align: center;
     }
 
-    .contact .contact-content  .info .head{
+    .contact .contact-content .row .info{
+        margin-left: 15px;
+    }
+
+    .contact .contact-content .info .head{
         font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 5px;
     }
 
     .contact .contact-content .info .subtitle{
         color: #333;
+        font-size: 16px;
     }
 
     .contact .right form .fields{
@@ -555,6 +571,28 @@
         background: none;
     }
 
+    .form-status {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        display: none;
+    }
+
+    .form-status.success {
+        display: block;
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .form-status.error {
+        display: block;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
 /*footer section*/
     footer{
         background: #111;
@@ -607,5 +645,107 @@
             display: inline-block;
             margin: 20px 0;
             font-size: 25px;
+        }
+        .home .home-content .text-2{
+            font-size: 40px;
+        }
+        .home .home-content .text-3{
+            font-size: 25px;
+        }
+        .home .home-content .text-4 span{
+            font-size: 25px;
+        }
+        .about .about-content .left img{
+            height: 350px;
+            width: 350px;
+        }
+        .about .about-content .right{
+            width: 100%;
+            margin-top: 30px;
+        }
+        .services .services-content .card{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .contact .contact-content .column{
+            width: 100%;
+        }
+        .contact .contact-content .left{
+            margin-bottom: 30px;
+        }
+        .contact .contact-content .left .icons{
+            grid-template-columns: 1fr;
+            max-width: 400px;
+        }
+    }  
+
+    @media(max-width: 690px){
+        .max-width{
+            padding: 0 23px;
+        }
+        .home .home-content .text-2{
+            font-size: 30px;
+        }
+        .home .home-content .text-3{
+            font-size: 20px;
+        }
+        .home .home-content .text-4 span{
+            font-size: 20px;
+        }
+        .about .about-content .left img{
+            height: 300px;
+            width: 300px;
+        }
+        .section .title{
+            font-size: 30px;
+        }
+    }
+
+    @media(max-width: 500px){
+        .home .home-content .text-2{
+            font-size: 25px;
+        }
+        .home .home-content .text-3{
+            font-size: 18px;
+        }
+        .home .home-content .text-4 span{
+            font-size: 18px;
+        }
+        .about .about-content .left img{
+            height: 250px;
+            width: 250px;
+        }
+        .contact .right form .fields{
+            flex-direction: column;
+        }
+        .contact .right form .field,
+        .contact .right form .textarea{
+            width: 100%;
+        }
+        .contact .right form .name{
+            margin-right: 0;
+        }
+        .contact .right form .email{
+            margin-left: 0;
+        }
+        .contact .contact-content .column{
+            padding: 0 20px;
+        }
+        
+        .contact .contact-content .left p{
+            font-size: 15px;
+        }
+
+        .contact .contact-content .row{
+            height: auto;
+            padding: 10px 0;
+        }
+
+        .contact .contact-content .info .head{
+            font-size: 16px;
+        }
+
+        .contact .contact-content .info .subtitle{
+            font-size: 14px;
         }
     }  
